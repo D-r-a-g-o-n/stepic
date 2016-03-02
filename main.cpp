@@ -175,6 +175,7 @@ int toInt(string &s)
 
 int main(int argc, char *argv[])
 {
+	/*
 	for(int i=0; i<argc; i++)
 	{
 		if(strcmp(argv[i],"-h")==0)
@@ -190,6 +191,14 @@ int main(int argc, char *argv[])
 			directory=string(argv[i+1]);
 		}
 	}
+	*/
+	getopt(argc,argv,"d:h:p:");
+        directory=string(optarg);
+        getopt(argc,argv,"d:h:p:");
+        ip=string(optarg);
+        getopt(argc,argv,"d:h:p:");
+        port=string(optarg);
+
 	daemon(0,0);
 	vector<int> workers;
 	int sockPair[2];
