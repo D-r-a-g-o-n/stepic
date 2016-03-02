@@ -190,7 +190,7 @@ int main(int argc, char *argv[])
 			directory=string(argv[i+1]);
 		}
 	}
-	daemon(1,0);
+	daemon(0,0);
 	vector<int> workers;
 	int sockPair[2];
 	int cntWorkers=8;
